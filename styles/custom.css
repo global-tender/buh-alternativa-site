@@ -1,0 +1,11 @@
+.top-menu {
+	font-weight: 600 !important;
+}
+
+.top-menu:hover {
+}
+
+.go-top {
+	color: #000 !important;
+	position: absolute;
+}
