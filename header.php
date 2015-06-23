@@ -34,10 +34,60 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+	<div class="quotes">
+		<div class="quote-text">Преимущество мы отдаем той помощи, которая влечет за собой другую помощь, более мощную и длительную.
+			<br /><b>Михаил Жванецкий</b>
+		</div>
+		<div class="quote-text">Экономист — человек, который знает, как зарабатывать деньги, и зарабатывает их, но не себе, а другим.
+			<br /><b>В. Зубков</b>
+		</div>
+		<div class="quote-text">Для достижения успеха надо ставить цели несколько выше, чем те, которые в настоящее время могут быть достигнуты.
+			<br /><b>Макс Планк</b>
+		</div>
+		<div class="quote-text">Не бойтесь больших расходов, бойтесь маленьких доходов.
+			<br /><b>Джон РОКФЕЛЛЕР</b>
+		</div>
+		<div class="quote-text">Хорошим средством обогащения являются товарищества, если иметь дело с людьми надежными.
+			<br /><b>Фрэнсис Бэкон</b>
+		</div>
+		<div class="quote-text">Фактически успех ­ это только 1 процент вашей работы, а остальные 99 процентов это неудачи.
+			<br /><b>Соичиро Хонда</b>
+		</div>
+		<div class="quote-text">Мысли о будущем, постоянные размышления о том, как сделать больше, порождают такое состояние ума, при котором ничто не кажется невозможным. <b>Генри Форд</b>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function()
+		{
+			 setupRotator();
+		});
+		function setupRotator()
+		{
+			if($('.quote-text').length > 1)
+			{
+				$('.quote-text:first').addClass('current').fadeIn(1000);
+				setInterval('textRotate()', 15000);
+			}
+		}
+		function textRotate()
+		{
+			var current = $('.quotes > .current');
+			if(current.next().length == 0)
+			{
+				current.removeClass('current').fadeOut(10);
+				$('.quote-text:first').addClass('current').fadeIn(1000);
+			}
+			else
+			{
+				current.removeClass('current').fadeOut(10);
+				current.next().addClass('current').fadeIn(1000);
+			}
+		}
+	</script>
 	<!-- Navigation -->
 	<nav class="navbar navbar-default mymenu" role="navigation">
 
-		<div class="container"> <!-- Brand and toggle get grouped for better mobile display -->
+		<div class="container">
 
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -56,7 +106,7 @@
 						<a class="top-menu" href="/p/clients/">Наши клиенты</a>
 					</li>
 					<li>
-						<a class="top-menu" href="/p/contacts/">Контакты</a>
+						<a class="top-menu" href="/p/contacts/#info">Контакты</a>
 					</li>
 				</ul>
 			</div>	<!-- /.navbar-collapse -->
@@ -65,6 +115,9 @@
 	</nav>
 
 	<div class="intro-header">
+
+		<img class="calculator" src="/images/calculator.png" />
+
 		<div class="intro-fotorama">
 			<img src="/images/back-min.jpg">
 			<img src="/images/back2-min.jpg">

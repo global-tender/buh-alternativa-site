@@ -9,3 +9,29 @@
 	color: #000 !important;
 	position: absolute;
 }
+
+.quotes {
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	background: url('/images/quote.png') no-repeat;
+	z-index: 10;
+	top: 90px;
+	opacity: 0.85;
+	left: 2%;
+}
+
+.quote-text {
+	padding-top: 35px;
+	padding-left: 70px;
+	padding-right: 34px;
+	font-size: 0.85em;
+	display: none;
+}
+
+.calculator {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	top: 150px;
+}

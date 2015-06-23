@@ -17,6 +17,7 @@ include_once("../../header.php");
 			</div>
 			<!-- Content Column -->
 			<div class="col-md-9">
+				<a name="info"></a>
 				<h2>Контактная информация</h2><hr />
 				<p><i class="fa fa-home"></i> пр. Буденовский 26/57 оф. 14, г Ростов-на-Дону<br /></p>
 				<p><i class="fa fa-phone"></i> +7 (863) 269-46-14</p>
@@ -92,7 +93,13 @@ include_once("../../header.php");
 if (isset($_POST['message']))
 {
 	$content = "Вам отправлено сообщение с сайта atv61.ru.\n\nИмя: {$_POST['name']}\nТелефон: {$_POST['tel']}\nE-Mail: {$_POST['email']}\n\nСообщение:\n\n{$_POST['message']}\n";
-	mail("ihptru@gmail.com", "Сообщение с сайта atv61.ru", $content);
+	
+	$headers = 'From: atv61.ru <no_reply@atv61.ru>' . "\r\n" .
+	'Reply-To: no_reply@atv61.ru' . "\r\n";
+
+	$params = "-fno_reply@atv61.ru";
+
+	mail("ihptru@gmail.com", "Сообщение с сайта atv61.ru", $content, $headers, $params);
 }
 
 ?>
