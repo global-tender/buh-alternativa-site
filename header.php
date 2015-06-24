@@ -74,7 +74,7 @@
 			var current = $('.quotes > .current');
 			if(current.next().length == 0)
 			{
-				current.removeClass('current').fadeOut(10);
+				current.removeClass('current').fadeOut(5);
 				$('.quote-text:first').addClass('current').fadeIn(1000);
 			}
 			else

@@ -63,7 +63,7 @@ include_once("../../header.php");
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Номер телефона:</label> <input type="tel" name="tel" class="form-control" id="phone" required data-validation-required-message="Пожалуйста, введите номер телефона.">
+							<label>Номер телефона:</label> <input type="tel" name="phone" class="form-control" id="phone" required data-validation-required-message="Пожалуйста, введите номер телефона.">
 						</div>
 					</div>
 					<div class="control-group form-group">
@@ -88,11 +88,24 @@ include_once("../../header.php");
 		</div>
 	</div>
 
+	<div class="overlay"></div>
+	<div class="message_sent_popup">Сообщение отправлено<div class="closePopup"><label class="x"></label></div></div>
+
+	<script>
+		$(".overlay").on("click", function() {
+			$(this).hide()
+			$(".message_sent_popup").hide()
+		})
+		$(".closePopup").on("click", function() {
+			$(".overlay").hide()
+			$(".message_sent_popup").hide()
+		})
+	</script>
 <?php
 
 if (isset($_POST['message']))
 {
-	$content = "Вам отправлено сообщение с сайта atv61.ru.\n\nИмя: {$_POST['name']}\nТелефон: {$_POST['tel']}\nE-Mail: {$_POST['email']}\n\nСообщение:\n\n{$_POST['message']}\n";
+	$content = "Вам отправлено сообщение с сайта atv61.ru.\n\nИмя: {$_POST['name']}\nТелефон: {$_POST['phone']}\nE-Mail: {$_POST['email']}\n\nСообщение:\n\n{$_POST['message']}\n";
 	
 	$headers = 'From: atv61.ru <no_reply@atv61.ru>' . "\r\n" .
 	'Reply-To: no_reply@atv61.ru' . "\r\n";
@@ -100,6 +113,32 @@ if (isset($_POST['message']))
 	$params = "-fno_reply@atv61.ru";
 
 	mail("ihptru@gmail.com", "Сообщение с сайта atv61.ru", $content, $headers, $params);
+	echo "
+		<script> 
+			$(document).ready(function(){
+				$('.overlay').show();
+				$('.message_sent_popup').show();
+			});
+		</script>
+	";
+
+	$message_array = array();
+	$message_array['name'] = $_POST['name'];
+	$message_array['phone'] = $_POST['phone'];
+	$message_array['email'] = $_POST['email'];
+	$message_array['message'] = $_POST['message'];
+	$message_array['date'] = date('Y.m.d H:i:s');
+
+	$messages_json = array();
+	if (file_exists('./feedback_messages.txt'))
+	{
+		$tmp = file_get_contents('./feedback_messages.txt');
+		$messages_json = (array)json_decode($tmp);
+	}
+	$messages_json[] = $message_array;
+
+	file_put_contents('./feedback_messages.txt', json_encode($messages_json));
+
 }
 
 ?>
