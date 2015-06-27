@@ -1,5 +1,5 @@
 .top-menu {
-	font-weight: 600 !important;
+	font-weight: 500 !important;
 }
 
 .top-menu:hover {
@@ -51,17 +51,16 @@
 	display: none;
 	position: absolute;
 	z-index: 1001;
-	top: 100px;
+	top: 110px;
 	left: 33%;
 	width: 400px;
 	min-height: 50px;
-	padding: 10px 10px 10px 10px;
-	background-color: #964f4d;
+	padding: 12px 10px 10px 10px;
+	background-color: #800000;
 	color: #fff;
-	border: 2px solid #74c2e7;
+	border: 1px solid #74c2e7;
 	border-radius: 4px;
 	text-align: center;
-	font-weight: bold;
 	font-size: 1.2em;
 }
 
@@ -100,4 +99,15 @@ label.x:after {
 	color: #FFF;
 	line-height: 16px;
 	text-align: center;
+}
+
+.grid-item {
+	width: 200px;
+	min-height: 100px;
+	padding: 5px;
+}
+
+.grid-item img {
+	max-width: 200px;
+	padding-right: 5px;
 }

@@ -1,5 +1,5 @@
 <?php
-$title = "Наши клиенты | Альтернатива - Бухгалтерские и юридические услуги";
+$title = "Наши клиенты | Альтернатива - Бухгалтерские и юридические услуги, Ростов-на-Дону";
 include_once("../../header.php");
 ?>
 
@@ -18,7 +18,27 @@ include_once("../../header.php");
 			<!-- Content Column -->
 			<div class="col-md-9">
 				<h2>Наши клиенты</h2><hr />
-				<p>Страница подготавливается</p>
+
+				<div class="grid">
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+				</div>
+
+				<script>
+					$('.grid').masonry({
+						// options
+						itemSelector: '.grid-item',
+						columnWidth: 200
+					});
+
+					$(document).ready(function() {
+						$(".fancybox").fancybox();
+					});
+
+				</script>
 			</div>
 		</div>
 	</div>

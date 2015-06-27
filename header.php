@@ -25,6 +25,12 @@
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="/scripts/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="/scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
 	<script src="/scripts/main.js"></script>
 
 	<link rel="stylesheet" href="/styles/custom.css">
@@ -65,7 +71,8 @@
 		{
 			if($('.quote-text').length > 1)
 			{
-				$('.quote-text:first').addClass('current').fadeIn(1000);
+				var random = Math.floor(Math.random()*$('.quote-text').size());
+				$('.quote-text').eq(random).addClass('current').fadeIn(1000);
 				setInterval('textRotate()', 15000);
 			}
 		}
