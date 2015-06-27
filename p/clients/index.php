@@ -20,11 +20,11 @@ include_once("../../header.php");
 				<h2>Наши клиенты</h2><hr />
 
 				<div class="grid">
-					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
-					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
-					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
-					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
-					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img class="grid-item-img" src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img class="grid-item-img" src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img class="grid-item-img" src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img class="grid-item-img" src="/images/visitka-example.png" /></a></div>
+					<div class="grid-item"><a class="fancybox" rel="group" title="Название компании" href="/images/visitka-example.png"><img class="grid-item-img" src="/images/visitka-example.png" /></a></div>
 				</div>
 
 				<script>
@@ -36,6 +36,12 @@ include_once("../../header.php");
 
 					$(document).ready(function() {
 						$(".fancybox").fancybox();
+					});
+
+					$('.grid-item-img').hover(function(){
+						$(this).animate({"margin-top":"-3px"}, 'fast');
+					}, function(){
+						$(this).animate({"margin-top":"3px"}, 'fast');
 					});
 
 				</script>

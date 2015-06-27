@@ -3,6 +3,23 @@
 }
 
 .top-menu:hover {
+	border-bottom: 1px dashed #999;
+}
+
+.top-menu {
+	padding: 0px 0px 0px 0px !important;
+	margin-right: 15px !important;
+	margin-left: 15px !important;
+	margin-bottom: 15px !important;
+	margin-top: 15px !important;
+}
+
+.top-menu.current-menu {
+	border-bottom: 1px dashed #fff;
+}
+
+.top-menu.current-menu:hover {
+	border-bottom: 1px dashed #999;
 }
 
 .go-top {

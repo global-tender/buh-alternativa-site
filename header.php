@@ -110,10 +110,10 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a class="top-menu" href="/p/clients/">Наши клиенты</a>
+						<a class="top-menu <? if ($_SERVER['PHP_SELF'] == '/p/clients/index.php') echo 'current-menu'; ?>" href="/p/clients/">Наши клиенты</a>
 					</li>
 					<li>
-						<a class="top-menu" href="/p/contacts/#info">Контакты</a>
+						<a class="top-menu <? if ($_SERVER['PHP_SELF'] == '/p/contacts/index.php') echo 'current-menu'; ?>" href="/p/contacts/#info">Контакты</a>
 					</li>
 				</ul>
 			</div>	<!-- /.navbar-collapse -->
