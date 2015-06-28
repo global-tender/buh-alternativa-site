@@ -148,3 +148,12 @@ label.x:after {
 	border: 1px dashed #ccc;
 	padding: 7px;
 }
+
+.uh-table {
+	border: 1px dashed #ccc;
+}
+
+.ur-table td {
+	border: 1px dashed #ccc;
+	padding: 7px;
+}
