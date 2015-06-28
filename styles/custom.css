@@ -139,3 +139,12 @@ label.x:after {
 .buh-content {
 	display: none;
 }
+
+.buh-table {
+	border: 1px dashed #ccc;
+}
+
+.buh-table td {
+	border: 1px dashed #ccc;
+	padding: 7px;
+}
