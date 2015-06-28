@@ -157,3 +157,7 @@ label.x:after {
 	border: 1px dashed #ccc;
 	padding: 7px;
 }
+
+.ur-content {
+	display: none;
+}
