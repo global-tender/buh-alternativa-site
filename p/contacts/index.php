@@ -112,7 +112,8 @@ if (isset($_POST['message']))
 
 	$params = "-fno_reply@atv61.ru";
 
-	mail("ihptru@gmail.com", "Сообщение с сайта atv61.ru", $content, $headers, $params);
+	mail("alternativa50@mail.ru", "Сообщение с сайта atv61.ru", $content, $headers, $params);
+
 	echo "
 		<script> 
 			$(document).ready(function(){

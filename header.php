@@ -7,6 +7,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 
+	<meta name="description" content="ООО Альтернатива, Бухгалтерские услуги, Юридические услуги, Бухгалтерский аутсорсинг в Ростов-на-Дону, бухгалтерия Ростов-на-Дону">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
